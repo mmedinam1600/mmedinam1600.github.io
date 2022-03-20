@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex</title>
+  <meta name="description" content="Interactive pokemon viewer.">
+  <meta name="author" content="Miguel Medina">
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+<div class="background"></div>
+<div class="container">
+  <div class="pokedex">
+    <img src="/assets/images/pokedex.png" alt="">
+    <div class="stats">
+      <div class="container-bars">
+        <div class="hp-stat">
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <div class="hp-bar"></div>
+          <h3>PS</h3>
+        </div>
+        <div class="attack-stat">
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <div class="attack-bar"></div>
+          <h3>ATK</h3>
+        </div>
+        <div class="defense-stat">
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <div class="defense-bar"></div>
+          <h3>DEF</h3>
+        </div>
+        <div class="special-attack-stat">
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <div class="special-attack-bar"></div>
+          <h3>SP-ATK</h3>
+        </div>
+        <div class="special-defense-stat">
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <div class="special-defense-bar"></div>
+          <h3>SP-DEF</h3>
+        </div>
+        <div class="speed-stat">
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <div class="speed-bar"></div>
+          <h3>SPEED</h3>
+        </div>
+      </div>
+      <div class="moves">
+        <p>Movimientos principales: </p>
+        <span id="move">Fire</span>
+      </div>
+    </div>
+    <div class="panel-pokemon-stats">
+      <p class="panel-pokemon-stat">Peso:</p>
+      <span id="weight-pokemon"></span>
+      <p class="panel-pokemon-stat">Altura:</p>
+      <span id="height-pokemon"></span>
+      <p class="panel-pokemon-stat">Habilidades:</p>
+      <div id="abilities-pokemon"></div>
+    </div>
+    <div class="panel-pokemon-image">
+      <img src="" id="pokemon-image" alt="pokemon image">
+      <h2 id="pokemon-name" class="panel-pokemon-name"></h2>
+      <div id="types"></div>
+    </div>
+    <form id="search-form">
+      <input type="text" name="search-pokemon" id="search-pokemon" class="search" placeholder="Pokemon" required spellcheck="false"/>
+      <button type="submit" class="search-button"><span class="material-icons">search</span></button>
+    </form>
+    <button id="random-pokemon" class="random-pokemon"></button>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="./assets/js/Fetch.js"></script>
+<script type="text/javascript" src="./assets/js/index.js"></script>
+</body>
+</html>

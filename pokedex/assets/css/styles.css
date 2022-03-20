@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "VT323", sans-serif;
+}
+
+html {
+  background-image: url('/assets/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 746px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokedex {
+  position: relative;
+  max-width: 746px;
+  max-height: 542px;
+  width: 100%;
+  height: auto;
+}
+
+.pokedex img {
+  width: 100%;
+  height: 100%;
+}
+
+.search {
+  position: absolute; left: 12%; top: 82.15%; width: 15.68%; height: 10%; z-index: 2;
+  border-radius: 5px;
+  font-family: "VT323", sans-serif;
+  font-size: clamp(21px, 3vw, 2vw);
+}
+
+.search-button {
+  position: absolute; left: 5.36%; top: 70.11%; width: 6.57%; height: 8.4%; z-index: 2;
+  border-radius: 50%;
+  background-color: rgba(50, 125, 250, 1);
+  cursor: pointer;
+  color: azure;
+}
+
+.search-button:hover {
+  background-color: rgb(44, 109, 218);
+}
+
+.panel-pokemon-image {
+  position: absolute; left: 21.05%; top: 25.83%; width: 21.58%; height: 40.96%; z-index: 2;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+  max-width: 160px;
+}
+
+#pokemon-image {
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: auto;
+  height: 15vw;
+  max-height: 130px;
+}
+
+.panel-pokemon-name {
+  font-size: clamp(12px, 1.2vw, 1.2vw);
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#types {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label {
+  padding: 3px 7px;
+  border-radius: 15px;
+  color: rgb(211, 207, 202);
+  margin-left: 3px;
+  margin-bottom: 3px;
+  font-size: clamp(12px, 0.8vw, 0.8vw);
+}
+
+.panel-pokemon-stats {
+  position: absolute; left: 7.24%; top: 27.86%; width: 13.54%; height: 32.1%; z-index: 2;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.panel-pokemon-stat {
+  margin-top: 5px;
+}
+
+.random-pokemon {
+  background-color: #50fb05;
+  border-color: #057b05;
+  position: absolute; left: 13.81%; top: 73.42%; width: 7.1%; height: 2.8%; z-index: 2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.random-pokemon:hover {
+  background-color: #07af07;
+}
+
+.stats {
+  position: absolute; left: 57.03%; top: 28.23%; width: 39.68%; height: 44.3%; z-index: 2;
+  background-color: wheat;
+}
+
+.container-bars {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  height: 75%;
+}
+
+.moves {
+  height: 25%;
+  padding: 5px;
+  overflow: auto;
+}
+
+.container-bars h3 {
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+}
+
+.hp-stat, .attack-stat, .defense-stat, .special-attack-stat, .special-defense-stat, .speed-stat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 13%;
+}
+
+.hp-bar, .attack-bar, .defense-bar, .special-attack-bar, .special-defense-bar, .speed-bar {
+  height: 5px;
+  background-color: gray;
+  margin: 1px;
+  width: 100%;
+}
+
+.active-bar {
+  background-color: greenyellow;
+}
+
+.electric {
+  background-image: linear-gradient(rgb(168, 147, 14) 50%, rgb(168, 147, 14) 50%);
+}
+.fire {
+  background-image: linear-gradient(rgb(182, 76, 2) 50%, rgb(182, 76, 2) 50%);
+}
+.flying {
+  background-image: linear-gradient(rgb(13, 130, 164) 50%, rgb(63, 68, 71) 50%);
+}
+.bug {
+  background-image: linear-gradient(rgb(91, 127, 50) 50%, rgb(91, 127, 50) 50%);
+}
+.water {
+  background-image: linear-gradient(rgb(48, 110, 150) 50%, rgb(48, 110, 150) 50%);
+}
+.grass {
+  background-image: linear-gradient(rgb(114, 144, 42) 50%, rgb(114, 144, 42) 50%);
+}
+.poison {
+  background-image: linear-gradient(rgb(99, 48, 113) 50%, rgb(99, 48, 113) 50%);
+}
+.normal {
+  background-image: linear-gradient(rgb(72, 78, 81) 50%, rgb(72, 78, 81) 50%);
+}
+.ground {
+  background-image: linear-gradient(rgb(164, 143, 7) 50%, rgb(137, 122, 53) 50%);
+}
+.fighting {
+  background-image: linear-gradient(rgb(170, 82, 28) 50%, rgb(170, 82, 28) 50%);
+}
+.psychic {
+  background-image: linear-gradient(rgb(139, 11, 86) 50%, rgb(139, 11, 86) 50%);
+}
+.rock {
+  background-image: linear-gradient(rgb(130, 112, 26) 50%, rgb(130, 112, 26) 50%);
+}
+.steel {
+  background-image: linear-gradient(rgb(64, 87, 88) 50%, rgb(64, 87, 88) 50%);
+}
+.ice {
+  background-image: linear-gradient(rgb(21, 119, 149) 50%, rgb(21, 119, 149) 50%);
+}
+.ghost {
+  background-image: linear-gradient(rgb(94, 74, 126) 50%, rgb(94, 74, 126) 50%);
+}
+.fairy {
+  background-image: linear-gradient(rgb(92, 3, 65) 50%, rgb(92, 3, 65) 50%);
+}
+.dragon {
+  background-image: linear-gradient(rgb(40, 107, 143) 50%, rgb(148, 33, 12) 50%);
+}
+.dark {
+  background-image: linear-gradient(rgb(84, 91, 95) 50%, rgb(84, 91, 95) 50%);
+}
+
+@media only screen and (max-width: 896px) {
+  .container {
+    align-items: self-start;
+    transform: scaleY(0.8) translateY(-35px);
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .search {
+    position: absolute; left: 12%; top: 81.4%; width: 15.68%; height: 10%; z-index: 2;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .search {
+    position: absolute; left: 12.1%; top: 81.4%; width: 15.68%; height: 10%; z-index: 2;
+  }
+
+  .search-button {
+    position: absolute;
+    left: 5.86%;
+    top: 69.81%;
+    width: 5.57%;
+    height: 7%;
+    z-index: 2;
+  }
+
+  .search-button span {
+    font-size: 18px !important;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .search {
+    position: absolute; left: 12%; top: 81%; width: 15.68%; height: 10%; z-index: 2;
+  }
+}
+
+
+/* Pantallas Iphone 5 para abajo */
+/* Horizontal */
+@media only screen and (max-width: 570px) {
+
+  .stats {
+    position: absolute; left: 57.03%; top: 27.5%; width: 39.68%; height: 44.3%; z-index: 2;
+    background-color: wheat;
+  }
+
+  .random-pokemon {
+    position: absolute;
+    left: 13.81%;
+    top: 72.53%;
+    width: 7.1%;
+    height: 2.8%;
+    z-index: 2;
+  }
+
+  .moves {
+    font-size: 10px;
+  }
+
+  .hp-stat, .attack-stat, .defense-stat, .special-attack-stat, .special-defense-stat, .speed-stat {
+    width: 10%;
+  }
+
+  .hp-bar, .attack-bar, .defense-bar, .special-attack-bar, .special-defense-bar, .speed-bar {
+    height: 3px;
+  }
+
+  .search {
+    position: absolute; left: 12.1%; top: 81.4%; width: 15.68%; height: 10%; z-index: 2;
+  }
+
+  .search-button {
+    position: absolute;
+    left: 5.86%;
+    top: 70.25%;
+    width: 5.57%;
+    height: 7%;
+    z-index: 2;
+  }
+
+  .panel-pokemon-stats {
+    font-size: 12px;
+  }
+
+}
+
+/* Vertical */
+@media only screen and (max-width: 400px) {
+
+  .random-pokemon {
+    position: absolute;
+    left: 13.81%;
+    top: 71.92%;
+    width: 7.1%;
+    height: 2.8%;
+    z-index: 2;
+  }
+
+  .panel-pokemon-stats {
+    font-size: 10px;
+  }
+
+  .search {
+    position: absolute; left: 12%; top: 80.7%; width: 15.68%; height: 10%; z-index: 2;
+  }
+  .search-button {
+    position: absolute;
+    left: 5.86%;
+    top: 69.65%;
+    width: 5.57%;
+    height: 7%;
+    z-index: 2;
+  }
+
+  .panel-pokemon-name {
+    font-size: 12px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .hp-bar, .attack-bar, .defense-bar, .special-attack-bar, .special-defense-bar, .speed-bar {
+    height: 1px;
+  }
+
+  .hp-stat h3, .attack-stat h3, .defense-stat h3, .special-attack-stat h3, .special-defense-stat h3, .speed-stat h3 {
+    font-size: 8px;
+  }
+
+}
+
